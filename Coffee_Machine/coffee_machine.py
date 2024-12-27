@@ -38,11 +38,12 @@ def make_coffee(choice, ingredients):
         resources[items] -= ingredients[items]
     typing(f"Enjoy your {choice} ☕ \n")
     
-
-while True:
+clear_screen()
+typing("Welcome to the Coffee Machine!\n")
+hold_screen()
+while True: 
     clear_screen()
-    typing("Welcome to the Coffee Machine!")
-    choice = get_input("What would you like? (espresso/latte/cappuccino): ")
+    choice = get_input("What would you like to have? (espresso/latte/cappuccino): ")
     if choice == 'off':
         break
     elif choice == 'report':

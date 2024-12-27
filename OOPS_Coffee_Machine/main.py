@@ -1,4 +1,5 @@
 from .menu import Menu, MenuItem
+
 from .coffee_maker import CoffeeMaker
 from .money_machine import MoneyMachine
 from common_functions import typing, hold_screen, clear_screen, get_input
@@ -7,6 +8,9 @@ menu = Menu()
 coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
+clear_screen()
+typing("Welcome to Coffee Machine !☕️")
+hold_screen()
 while True:
     clear_screen()
     options = menu.get_items()
