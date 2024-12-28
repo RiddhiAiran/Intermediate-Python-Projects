@@ -13,6 +13,7 @@ The program is designed to ensure sufficient resources are available before serv
 ## Program Demo
 Below is a quick demo of Coffee Machine program:
 
+![1](https://github.com/user-attachments/assets/bd45c984-5c86-43ad-a977-80403972fb5d)
 
 ---
 ## Features
