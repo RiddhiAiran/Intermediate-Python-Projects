@@ -1,6 +1,8 @@
 from turtle import Turtle, Screen
 import random
 import turtle
+screen = Screen()
+screen.title("Spirograph")
 
 rangila = Turtle()
 rangila.speed('fastest')
@@ -19,8 +21,6 @@ for i in range(360//size):
     rangila.color(random_color())
     rangila.circle(100)
     rangila.setheading(rangila.heading() + size)
-
-
 
 
 # Create the screen and set it to close on click

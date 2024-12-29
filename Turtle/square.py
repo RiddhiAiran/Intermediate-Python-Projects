@@ -1,8 +1,11 @@
 from turtle import Turtle, Screen
 
+screen = Screen()
+screen.title('Square')
+
 rangila = Turtle()
 rangila.shape('turtle')
-rangila.color('Indianred')
+rangila.color('Red')
 
 #Draw a Square
 for i in range(4):

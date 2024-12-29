@@ -5,6 +5,7 @@ pen = Turtle()
 pen.color('black') 
 pen.pensize(2)
 
+
 for i in range(15): 
     pen.forward(10)
     pen.penup() 
@@ -12,4 +13,5 @@ for i in range(15):
     pen.pendown()
 
 screen = Screen() 
+screen.title("Dashline")
 screen.exitonclick() 

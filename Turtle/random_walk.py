@@ -2,6 +2,8 @@ from turtle import Turtle, Screen
 import random
 import turtle
 
+screen = Screen()
+screen.title("Random Walk")
 # Object Assignment and Qualities
 brush = Turtle()
 brush.shape('turtle')
@@ -27,5 +29,5 @@ for i in range(200):
     brush.setheading(random.choice(directions)) # Point Right - 90 Degrees 
 
 # Create the screen and set it to close on click
-screen = Screen()
+
 screen.exitonclick()

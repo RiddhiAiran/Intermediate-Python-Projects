@@ -1,7 +1,7 @@
 import random
 import turtle
 from turtle import Turtle, Screen
-
+import time
 # Based on : Damien Hirst Art Work
 
 # Predefined color palette
@@ -15,6 +15,10 @@ colors = [
     (168, 99, 102)
 ]
 
+screen = Screen()
+screen.title("Dot Painting")
+screen.setup(width=1000,height=1000)
+
 # Setup the turtle object
 turtle.colormode(255)  # Set color mode to RGB
 brush = Turtle()
@@ -22,14 +26,16 @@ brush.speed('fastest')  # Set turtle speed to fastest
 brush.hideturtle()
 brush.penup()
 
+
 # with Experimenting
-brush.goto(-165, -165)  # Move the turtle to a specific coordinate (bottom-left corner)
+brush.goto(-250, -250)  # Move the turtle to a specific coordinate (bottom-left corner)
 brush.setheading(0)  # Point the turtle to the right (optional)
 
 # Number of dots to draw
 num_dots = 100
 dot_size = 20
 distance_between_dots = 50
+time.sleep(1)
 
 # Draw the grid of dots
 for count in range(1, num_dots + 1):
@@ -44,6 +50,4 @@ for count in range(1, num_dots + 1):
         brush.forward(distance_between_dots * 10)  # Move back to the start of the row
         brush.setheading(0)  # Point right
 
-# Create the screen and set it to close on click
-screen = Screen()
 screen.exitonclick()
