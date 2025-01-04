@@ -9,7 +9,7 @@ coffee_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
 clear_screen()
-typing("Welcome to Coffee Machine !☕️")
+typing("Welcome to Coffee Machine !☕️\n")
 hold_screen()
 while True:
     clear_screen()

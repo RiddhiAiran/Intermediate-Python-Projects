@@ -14,4 +14,3 @@ for i in range(4):
 
 # Create the screen and set it to close on click
 screen.exitonclick()
-

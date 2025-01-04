@@ -1,12 +1,11 @@
 from turtle import Turtle, Screen
 import random 
-import time 
 
 screen = Screen() # Screen Object to Control the Display Screen when we run the code.
 screen.setup(width=500, height=500)
 screen.title("Turtle Race")
 screen.bgcolor("Beige")
-time.sleep(2)
+user_choice = screen.textinput(title='Make your Bet', prompt="Which turtle will win the race? Enter a color:")
 
 colors = ['red', 'orange', 'black', 'green', 'blue', 'purple', 'brown']
 y_position = [-150, -100, -50, 0, 50, 100, 150]
@@ -20,7 +19,6 @@ for i in range(7):
     new_turtle.goto(x=-240, y=y_position[i])
     all_turtles.append(new_turtle)
 
-user_choice = screen.textinput(title='Make your Bet', prompt="Which turtle will win the race? Enter a color:")
 if user_choice:
     race = True 
 
@@ -39,6 +37,7 @@ while race:
                 text_writer.write(f"You won! {winner.title()} is the winner of the race.", align="center", font=("Arial", 16, "bold"))
             else:
                 text_writer.write(f"You lose! {winner.title()} is the winner of the race.", align="center", font=("Arial", 16, "bold"))
-        turtle.forward(random.randint(0, 10))
-
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
+        
 screen.exitonclick()

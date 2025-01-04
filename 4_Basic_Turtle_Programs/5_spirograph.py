@@ -16,13 +16,13 @@ def random_color():
     return (r,g,b)
 
 # Draw a SpiroGraph
-size = 3
-for i in range(360//size):
-    rangila.color(random_color())
-    rangila.circle(100)
-    rangila.setheading(rangila.heading() + size)
+def draw_spirograph(size_of_gap):
+    for _ in range(360//size_of_gap):
+        rangila.color(random_color())
+        rangila.circle(100)
+        rangila.setheading(rangila.heading() + size_of_gap)
 
+draw_spirograph(3)
 
-# Create the screen and set it to close on click
-screen = Screen()
+# Set it to close on click
 screen.exitonclick()

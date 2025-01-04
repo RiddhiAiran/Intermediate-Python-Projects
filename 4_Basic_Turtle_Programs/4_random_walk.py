@@ -4,7 +4,7 @@ import turtle
 
 screen = Screen()
 screen.title("Random Walk")
-# Object Assignment and Qualities
+# Object Assignment and Qualitie
 brush = Turtle()
 brush.shape('turtle')
 brush.color('green')
