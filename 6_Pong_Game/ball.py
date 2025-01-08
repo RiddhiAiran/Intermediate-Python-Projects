@@ -1,4 +1,6 @@
+# ball.py
 from turtle import Turtle
+from constants import BALL_SPEED, INITIAL_MOVE_SPEED, SPEED_INCREMENT
 
 class Ball(Turtle):
     def __init__(self):
@@ -6,25 +8,25 @@ class Ball(Turtle):
         self.color('white')
         self.shape('circle')
         self.penup()
-        self.x_move = 10
-        self.y_move = 10
-        self.move_speed = 0.1
+        self.reset_position()
         
     def move(self):
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
-        self.goto(new_x,new_y)
+        self.goto(new_x, new_y)
         
-        
-    def bounch_y(self):
+    def bounce_y(self):
+        """Bounce the ball vertically"""
         self.y_move *= -1 
         
-    def bounch_x(self):
+    def bounce_x(self):
+        """Bounce the ball horizontally and increase speed"""
         self.x_move *= -1 
-        self.move_speed *= 0.9
+        self.move_speed *= SPEED_INCREMENT
     
     def reset_position(self):
-        self.goto(0,0)
-        self.move_speed = 0.1
-        self.bounch_x()
-        
+        """Reset ball to center with initial settings"""
+        self.goto(0, 0)
+        self.move_speed = INITIAL_MOVE_SPEED
+        self.x_move = BALL_SPEED
+        self.y_move = BALL_SPEED

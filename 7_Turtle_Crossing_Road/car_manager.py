@@ -1,13 +1,13 @@
 from turtle import Turtle
 import random
 
+# Constants
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
-MOVE_INCREMENT = 10
+MOVE_INCREMENT = 2
 
 
 class CarManager:
-
     def __init__(self):
         self.all_cars = []
         self.car_speed = STARTING_MOVE_DISTANCE
@@ -24,8 +24,17 @@ class CarManager:
             self.all_cars.append(new_car)
 
     def move_cars(self):
-        for car in self.all_cars:
+        for car in self.all_cars[:]:  # Create a copy of the list for iteration
             car.backward(self.car_speed)
+            # Remove cars that are off screen
+            if car.xcor() < -320:
+                self.all_cars.remove(car)
+                car.hideturtle()
 
     def level_up(self):
         self.car_speed += MOVE_INCREMENT
+
+    def clear_cars(self):
+        for car in self.all_cars:
+            car.hideturtle()
+        self.all_cars.clear()
